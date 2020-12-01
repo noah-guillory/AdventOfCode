@@ -1,4 +1,4 @@
-﻿namespace CameronAavik.AdventOfCode
+﻿namespace NoahGuillory.AdventOfCode
 
 open System
 open System.IO
