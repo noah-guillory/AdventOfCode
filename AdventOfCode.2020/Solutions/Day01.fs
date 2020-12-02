@@ -2,20 +2,24 @@
 
 open NoahGuillory.AdventOfCode.Common
 
-let charToLevelDiff =
-    function
-    | '(' -> 1
-    | ')' -> -1
-    | c -> failwithf "Invalid character: %c" c
+let solvePart1 (input: int seq) =
+    let inList = input |> Seq.toList
+    
+    let res = [ for i in inList do
+                for j in inList do
+                if i + j = 2020 then i * j ]
+        
+    
+    res.Head
+    
 
-let solvePart1 input =
-    input
-    |> Seq.sumBy charToLevelDiff
-
-let solvePart2 input =
-    input
-    |> Seq.map charToLevelDiff
-    |> Seq.scan (+) 0
-    |> Seq.findIndex (fun l -> l < 0)
-
-let solver = { parse = parseFirstLine asString; part1 = solvePart1; part2 = solvePart2 }
+let solvePart2 (input: int seq) =
+    let inList = input |> Seq.toList
+    
+    let res = [ for i in inList do
+                for j in inList do
+                for k in inList do
+                if i + j + k = 2020 then i * j * k ]
+        
+    res.Head
+let solver = { parse = parseEachLine asInt; part1 = solvePart1; part2 = solvePart2 }

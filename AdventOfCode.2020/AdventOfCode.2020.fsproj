@@ -11,8 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="InputFiles\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Solutions\Day01.fs" />
-    <Folder Include="InputFiles" />
+    <Compile Include="Solutions\Day02.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
