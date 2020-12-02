@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "AdventOfCode.2020-All Days": {
+    "AdventOfCode.2019-All Days": {
       "commandName": "Project",
       "commandLineArgs": "ALL"
     },
-    "AdventOfCode.2020-Benchmark": {
+    "AdventOfCode.2019-Benchmark": {
       "commandName": "Project",
       "commandLineArgs": "BENCH"
     }
