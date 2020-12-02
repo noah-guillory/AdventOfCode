@@ -4,10 +4,6 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Tailcalls>true</Tailcalls>
-  </PropertyGroup>
-
   <ItemGroup>
     <Content Include="..\input\2020\*.*" CopyToOutputDirectory="PreserveNewest" Link="input\%(RecursiveDir)\%(Filename)%(Extension)" />
     <Compile Include="Solutions\Day01.fs" />
@@ -21,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdventOfCode.Common\AdventOfCode.Common.fsproj" />
+    <ProjectReference Include="..\Common\AdventOfCode.Common.fsproj" />
   </ItemGroup>
 
 </Project>
