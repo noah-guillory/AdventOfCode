@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="InputFiles\*.txt" CopyToOutputDirectory="PreserveNewest" Link="input\%(RecursiveDir)\%(Filename)%(Extension)" />
+    <Content Include="InputFiles\*.txt" CopyToOutputDirectory="Always" Link="input\%(RecursiveDir)\%(Filename)%(Extension)" />
     <Compile Include="Solutions\Day01.fs" />
     <Compile Include="Solutions\Day02.fs" />
     <Compile Include="Solutions\DayTemplate.fs" />

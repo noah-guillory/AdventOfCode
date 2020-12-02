@@ -23,7 +23,7 @@ module Program =
         let runDay day = for part in 1..2 do runPart day part
         match argv.[0] with
             | "BENCH" -> Benchmarking.runBenchmarks<Bench2020>()
-            | "ALL" -> for day in 1..25 do runDay day
+            | "ALL" -> for day in 1..2 do runDay day
             | x ->
                 let parts = x.Split('.') |> Array.map int
                 match parts.Length with
