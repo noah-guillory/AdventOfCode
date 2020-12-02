@@ -1,15 +1,15 @@
-﻿namespace NoahGuillory.AdventOfCode.Y2020
+﻿namespace AdventOfCode.FSharp.Y2020
 
-open NoahGuillory.AdventOfCode
-open NoahGuillory.AdventOfCode.Common
-open NoahGuillory.AdventOfCode.Benchmarking
+open AdventOfCode
+open AdventOfCode.Common
+open AdventOfCode.Benchmarking
 
 module Program =
     let getSolver day part printAnswer =
         let run (solver : Day<_, _, _>) =
             Runner.run printAnswer 2020 day part solver
         match day with
-        | 1  -> run Year2020Day01.solver | 2 -> run Year2020Day02.solver
+        | 1  -> run Year2020Day01.solver | 2  -> run Year2020Day02.solver
         | day -> fun _ -> printfn "Invalid Day: %i (Year %i)" day 2020
 
     type Bench2020() =

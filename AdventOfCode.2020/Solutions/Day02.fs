@@ -1,6 +1,6 @@
 module Year2020Day02
 
-open NoahGuillory.AdventOfCode.Common
+open AdventOfCode.Common
 
 type Policy =
     { PolicyChar: char

@@ -1,6 +1,6 @@
 module Year2020Day
 
-open NoahGuillory.AdventOfCode.Common
+open AdventOfCode.Common
 
 let parseLine (line : string) =
     asInt line

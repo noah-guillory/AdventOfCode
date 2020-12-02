@@ -1,4 +1,4 @@
-﻿namespace NoahGuillory.AdventOfCode
+﻿namespace AdventOfCode
 
 open System.IO
 open Common
@@ -6,7 +6,7 @@ open Common
 module Runner =
     let run printResult year day part (solver : Day<_, _, _>) =
         let run part solve =
-            let fileName = Path.Combine("InputFiles", (sprintf "day%02i.txt" day))
+            let fileName = Path.Combine("input", (sprintf "day%02i.txt" day))
             fun _ ->
                 let result = fileName |> solver.parse |> solve
                 if printResult then

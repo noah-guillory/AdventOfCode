@@ -1,6 +1,6 @@
 ﻿module Year2020Day01
 
-open NoahGuillory.AdventOfCode.Common
+open AdventOfCode.Common
 
 let solvePart1 (input: int seq) =
     let inList = input |> Seq.toList
