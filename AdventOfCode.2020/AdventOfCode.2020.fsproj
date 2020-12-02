@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>AdventOfCode.2020</RootNamespace>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
