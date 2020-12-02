@@ -9,7 +9,7 @@ module Program =
         let run (solver : Day<_, _, _>) =
             Runner.run printAnswer 2019 day part solver
         match day with
-        | 1  -> run Year2019Day01.solver
+        | 1  -> run Year2019Day01.solver | 2 -> run Year2019Day02.solver
         | day -> fun _ -> printfn "Invalid Day: %i (Year %i)" day 2019
 
     type Bench2019() =
