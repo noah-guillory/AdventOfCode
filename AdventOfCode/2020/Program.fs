@@ -9,7 +9,7 @@ module Program =
         let run (solver : Day<_, _, _>) =
             Runner.run printAnswer 2020 day part solver
         match day with
-        | 1  -> run Year2020Day01.solver | 2  -> run Year2020Day02.solver
+        | 1  -> run Year2020Day01.solver | 2  -> run Year2020Day02.solver | 3 -> run Year2020Day03.solver
         | day -> fun _ -> printfn "Invalid Day: %i (Year %i)" day 2020
 
     type Bench2020() =
@@ -23,7 +23,7 @@ module Program =
         let runDay day = for part in 1..2 do runPart day part
         match argv.[0] with
             | "BENCH" -> Benchmarking.runBenchmarks<Bench2020>()
-            | "ALL" -> for day in 1..2 do runDay day
+            | "ALL" -> for day in 1..3 do runDay day
             | x ->
                 let parts = x.Split('.') |> Array.map int
                 match parts.Length with
