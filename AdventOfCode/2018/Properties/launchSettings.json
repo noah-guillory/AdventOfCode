@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "AdventOfCode.2018-All Days": {
+      "commandName": "Project",
+      "commandLineArgs": "ALL"
+    },
+    "AdventOfCode.2018-Benchmark": {
+      "commandName": "Project",
+      "commandLineArgs": "BENCH"
+    }
+  }
+}

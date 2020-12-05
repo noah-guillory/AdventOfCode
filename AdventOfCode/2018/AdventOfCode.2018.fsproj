@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="..\..\input\2018\*.*" CopyToOutputDirectory="PreserveNewest" Link="input\%(RecursiveDir)\%(Filename)%(Extension)" />
+        <Compile Include="Solutions\Day03.fs" />
+        <Compile Include="Solutions\Day02.fs" />
+        <Compile Include="Solutions\Day01.fs" />
+        <Compile Include="Solutions\DayTemplate.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Common\AdventOfCode.Common.fsproj" />
+    </ItemGroup>
+    
+
+</Project>
