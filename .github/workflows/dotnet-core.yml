@@ -22,6 +22,6 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Run 2020 Days
-      run: dotnet run --project AdventOfCode.2020 ALL
+      run: dotnet run --project AdventOfCode/2020 ALL
     - name: Run Benchmarks
-      run: dotnet run --project AdventOfCode.2020 BENCH
+      run: dotnet run --project AdventOfCode/2020 BENCH
