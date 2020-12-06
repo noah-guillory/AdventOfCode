@@ -5,12 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\..\input\2020\*.*" CopyToOutputDirectory="PreserveNewest" Link="input\%(RecursiveDir)\%(Filename)%(Extension)" />
+    <Content Include="..\..\input\2020\*.*" CopyToOutputDirectory="Always" Link="input\2020\%(RecursiveDir)\%(Filename)%(Extension)" />
     <Compile Include="Solutions\Day01.fs" />
     <Compile Include="Solutions\Day02.fs" />
     <Compile Include="Solutions\Day03.fs" />
     <Compile Include="Solutions\Day04.fs" />
     <Compile Include="Solutions\Day05.fs" />
+    <Compile Include="Solutions\Day06.fs" />
     <Compile Include="Solutions\DayTemplate.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

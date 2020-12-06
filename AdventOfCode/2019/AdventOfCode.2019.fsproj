@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="..\..\input\2019\*.*" CopyToOutputDirectory="PreserveNewest" Link="input\%(RecursiveDir)\%(Filename)%(Extension)" />
+        <Content Include="..\..\input\2019\*.*" CopyToOutputDirectory="PreserveNewest" Link="input\2019\%(RecursiveDir)\%(Filename)%(Extension)" />
         <Compile Include="Solutions\Day01.fs" />
         <Compile Include="Solutions\DayTemplate.fs" />
         <Compile Include="Program.fs" />
