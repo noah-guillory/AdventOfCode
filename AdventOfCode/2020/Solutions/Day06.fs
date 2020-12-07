@@ -23,7 +23,7 @@ let getGroupAnswers (groupAnswers: string) =
 
 let getGroupAnswersPart2 (groupAnswers: string) =
     let groupSize = groupAnswers.Split(" ").Length
-    
+
     groupAnswers.Split " "
     |> Array.map Seq.toList
     |> List.concat
@@ -31,7 +31,7 @@ let getGroupAnswersPart2 (groupAnswers: string) =
         match answerMap.TryFind(answer) with
         | Some count -> answerMap.Add(answer, count + 1)
         | None -> answerMap.Add(answer, 1)) Map.empty
-    |> Map.filter(fun _ value -> value = groupSize)
+    |> Map.filter (fun _ value -> value = groupSize)
 
 let solvePart1 (input: string seq) =
     let data = input |> Seq.toArray
@@ -44,13 +44,6 @@ let solvePart1 (input: string seq) =
     |> Array.fold (fun sum groupMap ->
         let allYes = groupMap |> Map.values |> Seq.sum
         sum + allYes) 0
-
-
-
-
-
-
-
 
 let solvePart2 (input: string seq) =
     let data = input |> Seq.toArray
