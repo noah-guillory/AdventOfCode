@@ -24,6 +24,7 @@ module Common =
 
     let asString : string -> string = id
     let asInt : string -> int = int
+    let asInt64: string -> int64 = int64
     let asCharArray (s : string) = s.ToCharArray ()
     let asStringArray : string [] -> string [] = Array.map string
     let asIntArray : string [] -> int [] = Array.map int
