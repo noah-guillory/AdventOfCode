@@ -42,6 +42,18 @@ let rec containsShinyGold (bagName: string) (bagMap: BagMap) =
         else false)
 
 
+let rec countContents (bagName: string) (bagMap: BagMap) =
+    let contents = bagMap.[bagName]
+    
+    match contents with
+    | empty when empty = Map.empty -> 0
+    | some ->
+        some
+        |> Map.fold (fun sum name count -> sum + (count * (1 + countContents name bagMap))) 0
+    
+    
+    
+
 let parse = parseEachLine parseLine
 
 let solvePart1 (input) =
@@ -62,7 +74,19 @@ let solvePart1 (input) =
     |> List.length
 
 
-let solvePart2 (input) = input
+let solvePart2 (input) =
+    let allRules = input |> Seq.toArray
+
+    let bagNames = allRules |> Array.map identifyBag
+
+    let rules = allRules |> Array.map getRules
+
+
+    let compiledRules =
+        Array.fold2 (fun (bagMap: BagMap) (name: string) (rules: Map<string, int>) -> bagMap.Add(name, rules)) Map.empty
+            bagNames rules
+
+    countContents "shiny gold" compiledRules
 
 let solver =
     { parse = parse
