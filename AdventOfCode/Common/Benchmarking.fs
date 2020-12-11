@@ -17,7 +17,7 @@ module Benchmarking =
 
         abstract member GetSolverFunc : int -> int -> unit -> unit
     
-        [<Params (1, 2, 3, 4, 5, 6, 7, 8)>]
+        [<Params (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)>]
         member val public Day = 0 with get, set
 
         [<Params (1, 2)>]
